@@ -1,6 +1,6 @@
-
 #include <iostream>
 #include <stack>
+#include <vector>
 using namespace std;
 
 void mover(vector<int> &desde, vector<int> &hasta, char nomDesde, char nomHasta) {
@@ -11,14 +11,17 @@ void mover(vector<int> &desde, vector<int> &hasta, char nomDesde, char nomHasta)
 }
 void hanoi(int n, vector<int> &origen, vector<int> &auxiliar, vector<int> &destino,
            char nomOrigen, char nomAux, char nomDestino) {
+               
+               
+    
     if (n == 1) {
         mover(origen, destino, nomOrigen, nomDestino);
     } else {
-        // Paso 1: mover n-1 discos de origen a auxiliar
+        
         hanoi(n - 1, origen, destino, auxiliar, nomOrigen, nomDestino, nomAux);
-        // Paso 2: mover disco más grande de origen a destino
+      
         mover(origen, destino, nomOrigen, nomDestino);
-        // Paso 3: mover n-1 discos de auxiliar a destino
+      
         hanoi(n - 1, auxiliar, origen, destino, nomAux, nomOrigen, nomDestino);
     }
 }                    
@@ -82,8 +85,14 @@ int main()
                 origen = crearListaNumeros();
                 break;
             case 2: 
-			    tamañoLista=origen.size()
-			    hanoi(tamañoLista,origen,auxiliar,destino,"Origen","Auxiliar","Destino")
+            if(!origen.empty()){
+			    tamañoLista=origen.size();
+			    hanoi(tamañoLista,origen,auxiliar,destino,'O','A','D');
+			    
+            }else{
+                
+                 printf("No se han ingresado elementos a la lista\n");
+            }
                 break;
             default: 
                 printf("Opción no válida. Intente de nuevo.\n");
@@ -94,5 +103,4 @@ int main()
 
     return 0;
 
-}
 }
