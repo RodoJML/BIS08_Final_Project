@@ -44,7 +44,7 @@ int main()
     // --------------- Inicio del Programa --------------------
     while(!exit){
         printf("\n----------------- Menu ---------------------- \n\n");
-        printf("1. Ingresar la cantidad de discos.              \n");
+        printf("1. Ingresar la cantidad de discos               \n");
         printf("2. Aplicar Torres de Hanoi                      \n");
         printf("3. Mostrar Torres de Hanoi                      \n");
         printf("4. Salir                                        \n");
@@ -100,13 +100,13 @@ stack<int> crearListaNumeros() {
     int tamañoLista, valor;
 
     cout << "\n-- Creando Discos -----------------------------\n";
-    cout << "¿Cuantos Discos desea Agregar?: ";
+    cout << "¿Cuantos discos desea agregar?: ";
     cin >> tamañoLista;
 
     // Solicitar al usuario cada valor (del más grande al más pequeño)
     cout << "Ingrese los tamaños de los discos del MÁS GRANDE al MÁS PEQUEÑO:\n";
     for (int i = 0; i < tamañoLista; i++) {
-        cout << "Disco [" << i + 1 << "] (más grande primero): ";
+        cout << "Tamaño del Disco [" << i + 1 << "]: ";
         cin >> valor;
         lista.push(valor);  // Agregar valor a la lista
     }
