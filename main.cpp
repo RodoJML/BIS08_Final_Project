@@ -169,6 +169,7 @@ void hanoi(int n, stack<int> &origen, stack<int> &auxiliar, stack<int> &destino,
         // ___  ___  ___  //  ___  ___  ___  
         //  A    B    C   //   A    B    C   
 
+        // Caso recursivo: 
         // Mover los discos que quedaron en la torre auxiliar a la torre destino
         //              B        A         C         
         //    Discos  Desde    Helper    Hasta     "B"       "A"       "C"
