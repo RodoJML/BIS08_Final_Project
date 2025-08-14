@@ -97,18 +97,23 @@ int main()
 
 stack<int> crearListaNumeros() {
     stack<int> lista;
-    int tamañoLista, valor;
+    int tamañoLista;
 
     cout << "\n-- Creando Discos -----------------------------\n";
-    cout << "¿Cuantos discos desea agregar?: ";
-    cin >> tamañoLista;
-
-    // Solicitar al usuario cada valor (del más grande al más pequeño)
-    cout << "Ingrese los tamaños de los discos del MÁS GRANDE al MÁS PEQUEÑO:\n";
-    for (int i = 0; i < tamañoLista; i++) {
-        cout << "Tamaño del Disco [" << i + 1 << "]: ";
-        cin >> valor;
-        lista.push(valor);  // Agregar valor a la lista
+    while (true) {
+        cout << "¿Cuántos discos desea agregar?: ";
+        cin >> tamañoLista;
+        if (cin.fail() || tamañoLista <= 0) {
+            cin.clear(); 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Por favor, ingrese un número válido mayor que 0.\n";
+            continue;
+        }
+        break;
+    }
+	//Genera los discos del más grande al más pequeño
+    for (int i = tamañoLista; i >= 1; i--) {
+        lista.push(i);
     }
 
     cout << "\nLista creada exitosamente.\n";
