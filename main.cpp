@@ -187,7 +187,7 @@ void printTowers(const stack<int> &origen, const stack<int> &auxiliar, const sta
     // Esta función imprime el estado actual de las torres
     // Se imprimen los discos de cada torre, desde el disco más pequeño (en la cima) hasta el más grande (en la base)
 
-    printf("\nTower A: ");
+    printf("\nTorre A: ");
     if (origen.empty()) {
         printf("[vacía]\n");
     } else {
@@ -200,7 +200,7 @@ void printTowers(const stack<int> &origen, const stack<int> &auxiliar, const sta
         printf("(abajo)\n");
     }
 
-    printf("Tower B: ");
+    printf("Torre B: ");
     if (auxiliar.empty()) {
         printf("[vacía]\n");
     } else {
@@ -213,7 +213,7 @@ void printTowers(const stack<int> &origen, const stack<int> &auxiliar, const sta
         printf("(abajo)\n");
     }
 
-    printf("Tower C: ");
+    printf("Torre C: ");
     if (destino.empty()) {
         printf("[vacía]\n");
     } else {
