@@ -61,9 +61,14 @@ int main()
         // Dependiendo de la opción seleccionada, se ejecuta una acción
         switch(opcionMenu){
             case 1: 
-                // Aqui se crea la lista (osea los discos con sus tamaños)
-                origen = crearListaNumeros();
-                break;
+                   // Limpiar torres antes de crear una nueva lista
+    				origen = stack<int>();
+   					auxiliar = stack<int>();
+    				destino = stack<int>();
+
+   					// Crear nueva lista de discos en la torre de origen
+   					origen = crearListaNumeros();
+  				  break;
 
             case 2:
                 if(origen.empty()){
