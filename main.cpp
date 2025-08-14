@@ -4,6 +4,7 @@
 #include <cstdio>
 #include <string>
 #include <cstring>
+#include <limits>
 using namespace std;
 
 void mover(stack<int> &desde, stack<int> &hasta, char nomDesde, char nomHasta);
