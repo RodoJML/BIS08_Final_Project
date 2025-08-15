@@ -27,7 +27,7 @@ int main()
     std::string integrantes[5] = {"202011770 Rodolfo Meneses Leal", 
                                   "20220114317 Carlos Jimenez", 
                                   "XXXXXXXXX Victoria ",
-                                  "XXXXXXXXX Xander ",
+                                  "202401111719 Xander Arce",
                                   "XXXXXXXXX ABC"};
 
     printf("\n================= ULatina ====================\n\n");
