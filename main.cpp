@@ -102,15 +102,16 @@ int main()
 }
 
 stack<int> crearListaNumeros() {
-    stack<int> lista;
+    stack<int> lista; // Pila que representará la torre
     int tamañoLista;
 
     cout << "\n-- Creando Discos -----------------------------\n";
     while (true) {
         cout << "¿Cuántos discos desea agregar?: ";
         cin >> tamañoLista;
+		 // Validación de entrada
         if (cin.fail() || tamañoLista <= 0) {
-            cin.clear(); 
+            cin.clear(); // Limpia el estado de error
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "Por favor, ingrese un número válido mayor que 0.\n";
             continue;
